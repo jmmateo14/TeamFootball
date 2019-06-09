@@ -55,3 +55,30 @@ module.exports.teamFindOne = function(req, res) {
             .send({"message": "No team in the request"});
         }
     };    
+
+    module.exports.teamFindByCountry = function(req, res) {
+        if (req.params && req.params.country) { 
+            Team
+            .find({country: req.params.country}) 
+            .exec(
+                function(err, teams) {
+                    if (!teams) { 
+                        return res
+                        .status(404)
+                        .send({"message": "country not found"});
+                    } else if (err) {
+                        return res
+                        .status(404)
+                        .send(err);
+                    }
+                    return res 
+                    .status(200)
+                    .send(teams);
+                }
+            );
+        } else {
+            return res
+            .status(404)
+            .send({"message": "No `country` in request"});
+        }
+    };
