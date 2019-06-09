@@ -28,3 +28,30 @@ module.exports.teamFindOne = function(req, res) {
         sendJSONresponse(res, 200, team);
       });
     };
+
+    module.exports.teamFindById = function(req, res) {
+        if (req.params && req.params.id) { 
+            Team
+            .findById(req.params.id) 
+            .exec(
+                function(err, team) {
+                    if (!team) { 
+                        return res
+                        .status(404)
+                        .send({"message": "team not found"});
+                    } else if (err) {
+                        return res
+                        .status(404)
+                        .send(err);
+                    }
+                    return res 
+                    .status(200)
+                    .send(team);
+                }
+            );
+        } else {
+            return res
+            .status(404)
+            .send({"message": "No team in the request"});
+        }
+    };    
