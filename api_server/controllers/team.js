@@ -8,6 +8,25 @@ var sendJSONresponse = function(res, status, content) {
     res.json(content);
   };
 
+
+//Encuentra todos los equipos
+  module.exports.teamFindAll = function (req, res) {
+    Team
+      .find({})
+      .exec(
+        function (err, allTeam) {
+          if (!allTeam) {
+            return res
+              .status(404)
+              .send({ "message": "teams not fouds" });
+          }
+          return res
+            .status(200)
+            .send(allTeam);
+        }
+      )
+  }
+
 //Encuentra el primer equipo
 module.exports.teamFindOne = function(req, res) {
     console.log('Finding team details', req.params);

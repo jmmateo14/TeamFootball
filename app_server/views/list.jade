@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  #banner.page-header
+
+  .row
+    .col-xs-12.col-sm-8
+      .row.list-group
+        each team in teams
+          .col-xs-12.list-group-item
+            a(href="/team/#{team._id}")
+              .row
+                .col-xs-12.col-sm-4
+                  img(src=team.image_url, alt="", style="width:100px; height:100px;")
+                .col-xs-12.col-sm-8
+                  h3= team.name
+                  p= team.country
+    .col-xs-12.col-sm-4
+      p.lead Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio est a animi perferendis quas harum tempora unde deserunt laborum numquam? Velit aspernatur doloribus nisi voluptate explicabo aliquid eum sequi ea.
+      .container 
+a.btn.btn-default.pull-right(href="/new") Add team
