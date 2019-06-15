@@ -3,6 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var cors = require('cors');
+
 var createError = require('http-errors');
 var express = require('express');
 
@@ -13,6 +15,16 @@ var indexRouter = require('./app_server/routes/index');
 var apiRouter = require('./api_server/routes/index');
 
 var app = express();
+
+app.use(cors())
+
+ app.get('/products/:id', function (req, res, next) {
+  res.json({msg: 'This is CORS-enabled for all origins!'})
+})
+
+ app.listen(80, function () {
+  console.log('CORS-enabled web server listening on port 80')
+})
 
 // view engine setup
 app.set('views', path.join(__dirname, 'app_server', 'views'));
