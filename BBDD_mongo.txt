@@ -1,0 +1,79 @@
+db.teams.insert(
+{
+	"_id" : ObjectId("5cfd045b20cbbb44664c555c"),
+	"name" : "Inter de Milán",
+	"country" : "Italia",
+	"foundation" : "9 de marzo de 1908",
+	"coach" : "Antonio Conte",
+	"stadium" : "Estadio San Siro",
+	"stars_player" : ["Diego Milito", "Zlatan Ibrahimović", "Wesley Sneijder", "Samuel Eto'o"],
+	"image_url" : "https://upload.wikimedia.org/wikipedia/commons/8/89/FC_Internazionale_Milano_2014.svg"
+}
+);
+
+db.teams.insert(
+{
+	"_id" : ObjectId("5cfd04618536d0e8399cfa81"),
+	"name" : "Real Madrid",
+	"country" : "España",
+	"foundation" : "6 de marzo de 1902 ",
+	"coach" : "Zinedine Zidane",
+	"stadium" : "	Santiago Bernabéu",
+	"stars_player" : ["Cristiano Ronaldo", "Iker Casillas", "Alfredo Di Stefano", "Raúl Gonzalez"],
+	"image_url" : "https://upload.wikimedia.org/wikipedia/commons/9/91/Real_Madrid.svg"
+}
+);
+
+db.teams.insert(
+{
+	"_id" : ObjectId("5cfd043e966b1f8ac10e3880"),
+	"name" : "Fútbol Club Barcelona",
+	"country" : "España",
+	"foundation" : "29 de noviembre de 1899 ",
+	"coach" : "Ernesto Valverde",
+	"stadium" : "Camp Nou",
+	"stars_player" : ["Leonel Messi", "Zlatan Ibrahimović", "Luis Suarez", "Carles Puyol"],
+	"image_url" : "https://upload.wikimedia.org/wikipedia/commons/4/47/FC_Barcelona.png"
+}
+);
+
+db.teams.insert(
+{
+	"_id" : ObjectId("5cfd0448cc5ae5d01620f0b0"),
+	"name" : "Bayern de Múnich",
+	"country" : "Alemania",
+	"foundation" : "27 de febrero de 1900",
+	"coach" : "Niko Kovač",
+	"stadium" : "Allianz Arena",
+	"stars_player" : ["Franz Beckenbauer", "Philipp Lahm", "Manuel Neuer", "Robert Lewandowski"],
+	"image_url" : "https://upload.wikimedia.org/wikipedia/commons/1/1b/FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg"
+}
+);
+
+
+db.teams.insert(
+{
+	"_id" : ObjectId("5cfd045043d6e3faf652bb23"),
+	"name" : "PSV Eindhoven",
+	"country" : "Holanda",
+	"foundation" : "31 de agosto de 1913",
+	"coach" : "Mark van Bommel",
+	"stadium" : "Philips Stadion",
+	"stars_player" : ["Luuk de Jong", "Dante Rigo", "Hirving Lozano"],
+	"image_url" : "https://upload.wikimedia.org/wikipedia/commons/5/50/PSV_Eindhoven_-_Philips_Stadion_-_Kleedkamer_Welkom_-_Cropped_Logo_2.jpg"
+}
+);
+
+//Datos de ejemplo para crear equipo en la app.
+db.teams.insert(
+{
+	"_id" : ObjectId(""),
+	"name" : "A.C. Milan",
+	"country" : "Italia",
+	"foundation" : "16 de diciembre de 1899",
+	"coach" : "Paolo Maldini",
+	"stadium" : "San Siro",
+	"stars_player" : ["Ronaldinho", "Clarence Seedorf", "Rivaldo"],
+	"image_url" : "https://upload.wikimedia.org/wikipedia/commons/d/d0/Logo_of_AC_Milan.svg"
+}
+);
