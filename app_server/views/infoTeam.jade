@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  #banner.page-header
+
+  .row
+    .col-xs-12.col-sm-1
+
+
+    .col-xs-12.col-sm-10
+        .col-xs-12.col-sm-4
+          img(src=teams.image_url, alt="", style="width:250px; height:250px;")
+        .col-xs-12.col-sm-2
+        .col-xs-12.col-sm-6
+          h3= teams.name
+          p= teams.coach
+          .container
+            h3 Stars Players
+            ul.list-group
+              each val, i in teams.stars_player
+                   li= val
+          .container 
+            form(action="/team/#{teams._id}" method="post")
+              
+              button.btn.btn-default.pull-right Trash
+            
+                  
+
+    .col-xs-12.col-sm-1
