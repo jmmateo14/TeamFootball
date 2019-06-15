@@ -11,7 +11,7 @@ var renderTeamsPage = function(req, res, responseBody) {
 };
 
 var renderOneTeamPage = function(req, res, responseBody) { 
-  res.render('oneTeam', {
+  res.render('infoTeam', {
     title: 'Team Store',
     teams: responseBody 
   });
@@ -29,7 +29,7 @@ module.exports.homelist = function(req, res) {
 
 
 module.exports.team = function (req, res) {
-  var path = '/team/' + req.params._id;
+  var path = '/team/' + req.params.teamId;
   var requestOptions = {
     url: apiOptions.server + path,
     method: 'GET',
@@ -53,5 +53,64 @@ module.exports.teamList = function(req, res, next) {
 
   request(requestOptions, function(err, response, responseBody) { 
     renderTeamsPage(req, res, responseBody); 
+  });
+};
+
+/* GET 'Add team' page */
+module.exports.addTeam = function(req, res) {
+  res.render('newTeam', {
+      title: 'Team store',
+      pageHeader: {
+          title: 'Team store'
+      }
+  });
+};
+
+/* POST 'Add team' page */
+module.exports.doAddTeam = function(req, res){
+  var requestOption, path;
+
+  var postData = {
+    name: req.body.name,
+    country: req.body.country,
+    foundation: req.body.foundation,
+    coach: req.body.coach,
+    stadium: req.body.stadium,
+    stars_player1: req.body.stars_player1,
+    stars_player2: req.body.stars_player2,
+    stars_player3: req.body.stars_player3,
+    image_url: req.body.image_url
+  };
+
+  path = '/team';
+  requestOption = {
+    url : apiOptions.server + path,
+    method : 'POST',
+    json : postData
+  };
+
+  request(requestOption, function(err,response,body){
+    if (response.statusCode === 201) {
+      res.redirect('/list');
+    }
+  });
+
+};
+
+module.exports.doDeleteTeam = function(req,res){
+  var requestOption, path;
+
+  var path = '/team/' + req.params.teamId;
+  
+  requestOption = {
+    url : apiOptions.server + path,
+    method : 'DELETE',
+    json : {},
+  };
+
+  request(requestOption, function(err,response,body){
+    if (response.statusCode === 204) {
+      res.redirect('/list');
+    }
   });
 };
