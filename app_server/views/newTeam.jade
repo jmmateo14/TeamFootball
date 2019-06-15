@@ -1,0 +1,51 @@
+extends layout
+
+block content
+  #banner.page-header
+
+  .row
+    .col-xs-12.col-sm-12
+      .row
+        .col-xs-12.col-md-12
+          form.form-horizontal(action="/team", method="post", role="form")
+            .form-group
+              label.col-xs-10.col-sm-2.control-label(for="name") Name
+              br
+              .col-xs-12.col-sm-10
+                input#name.form-control(name="name" placeholder="Name of the team" value="") 
+              
+              label.col-sm-10.col-sm-2.control-label(for="name") Date foundation
+              br
+              .col-xs-12.col-sm-10
+                input#name.form-control(name="foundation" placeholder="Date foundation of the team" value="")
+              
+              label.col-xs-10.col-sm-2.control-label(for="name") Coach
+              br
+              .col-xs-12.col-sm-10
+                input#name.form-control(name="coach" placeholder="Coach of the team" value="")
+              
+              label.col-xs-10.col-sm-2.control-label(for="name") Country
+              br
+              .col-xs-12.col-sm-10
+                input#name.form-control(name="country" placeholder="Country" value="")
+
+              label.col-xs-10.col-sm-2.control-label(for="name") Stadium
+              br
+              .col-xs-12.col-sm-10
+                input#name.form-control(name="stadium" placeholder="Stadium" value="")
+              
+              
+              .form-group
+              label.col-sm-10.col-sm-2.control-label(for="rating") Stars Player
+              br
+              .col-xs-12.col-sm-5
+                input#name.form-control(name="stars_player1" placeholder="Player 1" value="")
+                input#name.form-control(name="stars_player2" placeholder="Player 2" value="")
+                input#name.form-control(name="stars_player3" placeholder="Player 3" value="")
+
+              label.col-sm-2.control-label(for="image_url") URL image
+              br
+              .col-sm-10
+                textarea#review.form-control(name="image_url", rows="1" placeholder="URL for the image" )
+            button.btn.btn-default.pull-right Add new team
+              

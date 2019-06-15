@@ -13,7 +13,10 @@ block content
         .col-xs-12.col-sm-2
         .col-xs-12.col-sm-6
           h3= teams.name
-          p= teams.coach
+          p= "Pais: " + teams.country
+          p= "Entrenador: " + teams.coach
+          p= "Año de fundación: " + teams.foundation
+          p= "Estadio: " + teams.stadium
           .container
             h3 Stars Players
             ul.list-group

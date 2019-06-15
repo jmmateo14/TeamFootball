@@ -1,8 +1,69 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 100%;
+  background-color: #66D7D1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar-default {
+  background-color: #FF637D;
+  border-color: rgb(255, 255, 255);
+}
+
+.navbar-default .navbar-toggle {
+  border-color: #ffffff;
+}
+
+.navbar-brand {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: transparent;
+  border: 1px solid #63cffa;
+}
+
+.list-group-item {
+  background-color: #FFF87F;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+legend {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+a.text-muted:hover{
+  color: darkgray;
+  text-decoration: none;
 }
 
 a {
-  color: #00B7FF;
+  color: orange;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+.item-_id{
+  display: none;
+}
+
+.container.foot{
+  height: 50px;
+  background: url()
 }
