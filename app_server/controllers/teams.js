@@ -70,15 +70,16 @@ module.exports.addTeam = function(req, res) {
 module.exports.doAddTeam = function(req, res){
   var requestOption, path;
 
+
   var postData = {
     name: req.body.name,
     country: req.body.country,
     foundation: req.body.foundation,
     coach: req.body.coach,
     stadium: req.body.stadium,
-    stars_player: req.body.stars_player1,
-    stars_player: req.body.stars_player2,
-    stars_player: req.body.stars_player3,
+    stars_player1: req.body.stars_player1,
+    stars_player2: req.body.stars_player2,
+    stars_player3: req.body.stars_player3,
     image_url: req.body.image_url
   };
 
