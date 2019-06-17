@@ -69,7 +69,22 @@ module.exports.addTeam = function(req, res) {
 /* POST 'Add team' page */
 module.exports.doAddTeam = function(req, res){
   var requestOption, path;
+  console.log("HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+  console.log(req.body);
 
+  var arrayStarsPlayer = [];
+
+  if (req.body.stars_player1){
+    arrayStarsPlayer.push(req.body.stars_player1);
+  }
+
+  if (req.body.stars_player2){
+    arrayStarsPlayer.push(req.body.stars_player2);
+  }
+
+  if (req.body.stars_player3){
+    arrayStarsPlayer.push(req.body.stars_player3);
+  }
 
   var postData = {
     name: req.body.name,
@@ -77,9 +92,7 @@ module.exports.doAddTeam = function(req, res){
     foundation: req.body.foundation,
     coach: req.body.coach,
     stadium: req.body.stadium,
-    stars_player1: req.body.stars_player1,
-    stars_player2: req.body.stars_player2,
-    stars_player3: req.body.stars_player3,
+    stars_player: arrayStarsPlayer,
     image_url: req.body.image_url
   };
 
