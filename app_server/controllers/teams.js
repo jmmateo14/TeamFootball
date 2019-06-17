@@ -69,8 +69,6 @@ module.exports.addTeam = function(req, res) {
 /* POST 'Add team' page */
 module.exports.doAddTeam = function(req, res){
   var requestOption, path;
-  console.log("HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-  console.log(req.body);
 
   var arrayStarsPlayer = [];
 
